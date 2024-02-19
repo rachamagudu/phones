@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['email'])) {
-    header("location:index.php");
+    header("location:index.html");
     exit();
 }
 
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $result = mysqli_query($conn, $sql);
     if ($result) {
         $_SESSION['email'] = $email;
-        header("location:index.php");
+        header("location:index.html");
         exit();
     } else {
         echo "something wrong";

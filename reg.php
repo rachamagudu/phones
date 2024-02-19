@@ -11,7 +11,7 @@ $sql="INSERT INTO users(username,phoneno,email,pwd) VALUES('$username','$phoneno
 $result=mysqli_query($conn,$sql);
 
 if($result){
-    header("location:index.php");
+    header("location:index.html");
 }
 else{
     echo"bata not insertesd".mysqli_connect_error();
